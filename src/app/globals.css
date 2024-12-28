@@ -75,11 +75,7 @@
   animation-delay: 1.2s;
 }
 
-@media (min-width: 1024px) {
-  .hero {
-    height: 100vh;
-  }
-}
+
 
 
 

@@ -13,9 +13,9 @@ export async function sendEmail(formData: FormDataProps) {
 
   try {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    const { email, name, content, subject } = formData;
+    const { phone, name, content, subject } = formData;
 
-    const data = { name, email, content, subject };
+    const data = { name, phone, content, subject };
     await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
   } catch (err: any) {
     console.error(err);

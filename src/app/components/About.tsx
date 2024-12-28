@@ -6,7 +6,7 @@ const About: React.FC = () => {
         className=" mt-[20vh] relative py-20 bg-pink-100 overflow-hidden shadow-2xl"
       >
         <div
-          className="absolute inset-0  bg-[center_25%] "
+          className="absolute inset-0 bg-fixed bg-[center_3%] "
           style={{ backgroundImage: "url(/Karin3.jpg)" }}
         ></div>
 

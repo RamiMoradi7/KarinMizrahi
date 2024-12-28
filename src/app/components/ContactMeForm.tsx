@@ -98,13 +98,14 @@ const ContactMeForm = () => {
           error={formState.errors.name}
         />
         <FormInput
-          label="אימייל"
-          id="email"
-          name="email"
-          placeholder="הכנס את כתובת האימייל שלך"
-          value={formState.email}
+          label="טלפון"
+          type="number"
+          id="phone"
+          name="phone"
+          placeholder="מס טלפון"
+          value={formState.phone}
+          error={formState.errors.phone}
           onChange={handleInputChange}
-          error={formState.errors.email}
         />
         <TextareaInput
           label="הודעה"

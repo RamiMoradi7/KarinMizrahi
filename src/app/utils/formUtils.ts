@@ -4,7 +4,7 @@ import { FORM_SELECT_VALUES } from "./constants";
 export interface FormDataProps {
   subject: string;
   name: string;
-  email: string;
+  phone: string;
   content: string;
 }
 
@@ -18,7 +18,7 @@ export interface FormState extends FormDataProps {
 export const initialState: FormState = {
   subject: FORM_SELECT_VALUES[0],
   name: "",
-  email: "",
+  phone: "",
   content: "",
   success: false,
   message: "",
@@ -29,9 +29,9 @@ export const initialState: FormState = {
 export const formSchema = z.object({
   subject: z.string().min(1, "נושא פנייה הוא שדה חובה"),
   name: z.string().min(1, "הכנסי את שמך המלא"),
-  email: z
+  phone: z
     .string()
-    .email("הכנסי כתובת אימייל תקינה")
-    .min(1, "הכנסי את כתובת האימייל שלך"),
+    .min(9, "אנא הכנס/י מס טלפון תקין.")
+    .regex(/^\d{9,10}$/, "המספר צריך להכיל לפחות 9 או 10 ספרות"),
   content: z.string().min(1, "הודעה היא שדה חובה"),
 });
