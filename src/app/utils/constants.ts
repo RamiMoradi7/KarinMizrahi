@@ -1,3 +1,5 @@
+import { MouseEventHandler } from "react";
+
 export type TCourse = {
   title: string;
   price: number;
@@ -34,7 +36,7 @@ export const COURSES: TCourse[] = [
 export type TMenuItem = {
   href: string;
   label: string;
-  onClick: () => void;
+  onClick: MouseEventHandler<HTMLAnchorElement>; 
 };
 
 export const scrollToSection = (section: string) => {
@@ -43,7 +45,7 @@ export const scrollToSection = (section: string) => {
     window.location.href = `/#${section}`;
     return;
   }
-  const navbarHeight = 100;
+  const navbarHeight = 100; // Adjust if necessary
 
   const sectionTop = sectionEl.getBoundingClientRect().top + window.pageYOffset;
   const scrollToPosition = sectionTop - navbarHeight;
@@ -54,23 +56,47 @@ export const scrollToSection = (section: string) => {
   });
 };
 
+// Menu items with properly typed onClick handlers
 export const MENU_ITEMS: TMenuItem[] = [
-  { href: "/#hero", label: "דף הבית", onClick: () => scrollToSection("hero") },
+  {
+    href: "/#hero",
+    label: "דף הבית",
+    onClick: (e) => {
+      e.preventDefault(); // Prevent default link behavior
+      scrollToSection("hero");
+    },
+  },
   {
     href: "/#about",
     label: "קצת עליי",
-    onClick: () => scrollToSection("about"),
+    onClick: (e) => {
+      e.preventDefault(); // Prevent default link behavior
+      scrollToSection("about");
+    },
   },
   {
     href: "/#courses",
     label: "קורסים",
-    onClick: () => scrollToSection("courses"),
+    onClick: (e) => {
+      e.preventDefault(); // Prevent default link behavior
+      scrollToSection("courses");
+    },
   },
-  { href: "/#works", label: "עבודות", onClick: () => scrollToSection("works") },
+  {
+    href: "/#works",
+    label: "עבודות",
+    onClick: (e) => {
+      e.preventDefault(); // Prevent default link behavior
+      scrollToSection("works");
+    },
+  },
   {
     href: "/#contact",
     label: "צרי קשר",
-    onClick: () => scrollToSection("contact"),
+    onClick: (e) => {
+      e.preventDefault(); // Prevent default link behavior
+      scrollToSection("contact");
+    },
   },
 ];
 

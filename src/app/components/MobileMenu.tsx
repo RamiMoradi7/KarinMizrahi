@@ -3,16 +3,12 @@ import Link from "next/link";
 import { MENU_ITEMS, TMenuItem } from "../utils/constants";
 
 const MenuItem = ({ href, label, onClick }: TMenuItem) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    onClick();
-  };
-
   return (
     <div className="w-full">
       <Link
-        onClick={handleClick}
+        onClick={onClick}
         href={href}
+        passHref
         className="px-6 py-3 text-2xl font-medium text-gray-900  hover:text-[#E43AA7] rounded-lg transition duration-300 ease-in-out"
       >
         {label}
@@ -68,9 +64,9 @@ export default function MobileMenu({
                     key={href}
                     href={href}
                     label={label}
-                    onClick={() => {
+                    onClick={(e) => {
                       toggleMenu();
-                      onClick();
+                      onClick(e);
                     }}
                   />
                 ))}
