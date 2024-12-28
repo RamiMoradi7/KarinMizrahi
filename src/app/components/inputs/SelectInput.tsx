@@ -1,3 +1,4 @@
+import { FORM_SELECT_VALUES } from "@/app/utils/constants";
 export const SelectInput = ({
   label,
   id,
@@ -29,9 +30,14 @@ export const SelectInput = ({
       value={value}
       onChange={onChange}
     >
-      <option value="קורס מתחילות לק ג'ל">קורס מתחילות לק ג'ל</option>
-      <option value="השתלמות מקצועיות">השתלמות מקצועיות</option>
-      <option value="אחר">אחר</option>
+      {FORM_SELECT_VALUES.map((value) => (
+        <option
+          key={value}
+          value={value}
+        >
+          {value}
+        </option>
+      ))}
     </select>
     {error && (
       <p className="absolute text-red-500 text-sm -mt-8 left-5">{error}</p>

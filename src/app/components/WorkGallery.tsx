@@ -71,17 +71,14 @@ const WorkGallery = () => {
       <div className="swiper">
         <div className="swiper-wrapper">
           {images.map((src, index) => (
-            <div
-              className="swiper-slide"
-              key={index}
-            >
-              <div className="relative lg:w-2/3 w-full h-[650px] mx-auto overflow-hidden rounded-lg shadow-lg">
+            <div className="swiper-slide" key={index}>
+              <div className="relative w-full h-[400px] md:h-[600px] mx-auto overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src={src}
                   alt={`Gallery Image ${index + 1}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-500 ease-in-out"
+                  width={1000} 
+                  height={500}
+                  className="object-cover w-full h-full transition-transform duration-500 ease-in-out" 
                 />
               </div>
             </div>

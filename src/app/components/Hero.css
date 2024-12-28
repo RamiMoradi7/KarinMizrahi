@@ -1,0 +1,13 @@
+.hero-bg {
+  background-image: url("/Karin1.jpg");
+  background-size: cover;
+  background-position: center 3%;
+}
+
+@media (max-width: 768px) {
+  .hero-bg {
+    background-image: url("/Karin1.jpg");
+    background-size: cover;
+    background-position: center top;
+  }
+}

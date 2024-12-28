@@ -10,12 +10,12 @@ export default function LashesWorks() {
     <div className="grid gap-4 mt-12">
       <div>
         <Image
-          className="lg:h-[550px] h-auto max-w-full rounded-lg mx-auto"
+          className="object-cover lg:h-[550px] h-auto max-w-full rounded-lg mx-auto"
           src={Picture5}
           alt="Main Picture"
+          priority
           width={1000}
           height={550}
-          objectFit="cover"
         />
       </div>
       <div className="grid lg:grid-cols-4 grid-cols-2 gap-4">

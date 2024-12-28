@@ -167,3 +167,9 @@ export const LESSONS: Lesson[] = [
     ],
   },
 ];
+
+export const FORM_SELECT_VALUES: string[] = [
+  "קורס מתחילות לק ג'ל",
+  "השתלמות מקצועיות",
+  "אחר",
+];

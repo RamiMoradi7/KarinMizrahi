@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HeroText from "./HeroText";
+import "./Hero.css";
 
 const HeroSection: React.FC = () => {
   return (
@@ -8,10 +9,7 @@ const HeroSection: React.FC = () => {
       className="hero text-center min-h-screen lg:py-60 bg-blend-multiply relative w-full h-full"
     >
       <div
-        className="absolute inset-0 bg-cover bg-fixed bg-[center_3%]"
-        style={{
-          backgroundImage: `url("/Karin1.jpg")`,
-        }}
+        className="absolute inset-0 bg-fixed hero-bg"
       ></div>
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-transparent opacity-0"></div>
       <div className="relative z-0"></div>

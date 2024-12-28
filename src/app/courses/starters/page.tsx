@@ -33,7 +33,7 @@ const LessonCard = ({
           </h2>
         </div>
         <div className="flex-1 overflow-auto scale-105 p-2">
-          <List list={lessonContent} />
+          <List list={lessonContent} className="text-sm" />
         </div>
       </div>
     </div>

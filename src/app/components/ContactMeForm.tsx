@@ -73,7 +73,7 @@ const ContactMeForm = () => {
     <form
       className="relative shadow-2xl bg-cover bg-center rounded-lg lg:p-24 p-10 max-w-2xl mx-auto"
       style={{
-        backgroundImage: "url(./Karin4.jpg)",
+        backgroundImage: "url(/Karin4.jpg)",
       }}
       onSubmit={handleSubmit}
     >

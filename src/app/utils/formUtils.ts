@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { FORM_SELECT_VALUES } from "./constants";
 
 export interface FormDataProps {
   subject: string;
@@ -15,7 +16,7 @@ export interface FormState extends FormDataProps {
 }
 
 export const initialState: FormState = {
-  subject: "",
+  subject: FORM_SELECT_VALUES[0],
   name: "",
   email: "",
   content: "",
