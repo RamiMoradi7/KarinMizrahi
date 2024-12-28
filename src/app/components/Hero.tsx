@@ -1,39 +1,16 @@
-"use client";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import HeroText from "./HeroText";
-import "./Hero.css";
 
 const HeroSection: React.FC = () => {
-  const [bgPosition, setBgPosition] = useState("center center");
-
-  useEffect(() => {
-    const updateBgPosition = () => {
-      if (window.innerWidth <= 768) {
-        setBgPosition("center top");
-      } else {
-        setBgPosition("center 3%");
-      }
-    };
-
-    updateBgPosition();
-    window.addEventListener("resize", updateBgPosition);
-
-    return () => {
-      window.removeEventListener("resize", updateBgPosition);
-    };
-  }, []);
-
   return (
     <section
       id="hero"
       className="hero text-center min-h-screen lg:py-60 bg-blend-multiply relative w-full h-full"
     >
       <div
-        className="absolute inset-0 bg-fixed bg-cover"
+        className="absolute inset-0 bg-cover bg-[center_3%]"
         style={{
           backgroundImage: `url("/Karin1.jpg")`,
-          backgroundPosition: bgPosition,
         }}
       ></div>
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-transparent opacity-0"></div>
