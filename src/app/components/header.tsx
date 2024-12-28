@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
-import { scrollToSection } from "../utils/constants";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);

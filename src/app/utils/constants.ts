@@ -33,71 +33,19 @@ export const COURSES: TCourse[] = [
   },
 ];
 
-export type TMenuItem = {
-  href: string;
-  label: string;
-  onClick: MouseEventHandler<HTMLAnchorElement>; 
+
+export type TMenuItems = {
+  title: string;
+  link: string;
+  hash: string;
 };
 
-export const scrollToSection = (section: string) => {
-  const sectionEl = document.getElementById(section);
-  if (!sectionEl) {
-    window.location.href = `/#${section}`;
-    return;
-  }
-  const navbarHeight = 100; // Adjust if necessary
-
-  const sectionTop = sectionEl.getBoundingClientRect().top + window.pageYOffset;
-  const scrollToPosition = sectionTop - navbarHeight;
-
-  window.scrollTo({
-    top: scrollToPosition,
-    behavior: "smooth",
-  });
-};
-
-// Menu items with properly typed onClick handlers
-export const MENU_ITEMS: TMenuItem[] = [
-  {
-    href: "/#hero",
-    label: "דף הבית",
-    onClick: (e) => {
-      e.preventDefault(); // Prevent default link behavior
-      scrollToSection("hero");
-    },
-  },
-  {
-    href: "/#about",
-    label: "קצת עליי",
-    onClick: (e) => {
-      e.preventDefault(); // Prevent default link behavior
-      scrollToSection("about");
-    },
-  },
-  {
-    href: "/#courses",
-    label: "קורסים",
-    onClick: (e) => {
-      e.preventDefault(); // Prevent default link behavior
-      scrollToSection("courses");
-    },
-  },
-  {
-    href: "/#works",
-    label: "עבודות",
-    onClick: (e) => {
-      e.preventDefault(); // Prevent default link behavior
-      scrollToSection("works");
-    },
-  },
-  {
-    href: "/#contact",
-    label: "צרי קשר",
-    onClick: (e) => {
-      e.preventDefault(); // Prevent default link behavior
-      scrollToSection("contact");
-    },
-  },
+export const menuItems: TMenuItems[] = [
+  { title: "דף הבית", link: "/", hash: "#hero" },
+  { title: "קצת עליי", link: "/", hash: "#about" },
+  { title: "קורסים", link: "/", hash: "#courses" },
+  { title: "עבודות", link: "/", hash: "#works" },
+  { title: "צרי קשר", link: "/", hash: "#contact" },
 ];
 
 type LEARNING = {

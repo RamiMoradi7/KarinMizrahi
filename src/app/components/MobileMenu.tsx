@@ -1,18 +1,43 @@
 import { Dialog, Transition } from "@headlessui/react";
-import Link from "next/link";
-import { MENU_ITEMS, TMenuItem } from "../utils/constants";
+import { menuItems, TMenuItems } from "../utils/constants";
 
-const MenuItem = ({ href, label, onClick }: TMenuItem) => {
+const MenuItem = ({
+  hash,
+  link,
+  title,
+  toggleMenu,
+}: TMenuItems & { toggleMenu: () => void }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (hash) {
+      e.preventDefault();
+      window.history.pushState({}, "", link);
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          const navbarHeight = 100;
+
+          const sectionTop =
+            element.getBoundingClientRect().top + window.pageYOffset;
+          const scrollToPosition = sectionTop - navbarHeight;
+
+          window.scrollTo({
+            top: scrollToPosition,
+            behavior: "smooth",
+          });
+          toggleMenu();
+        }
+      }, 100);
+    }
+  };
+
   return (
     <div className="w-full">
-      <Link
-        onClick={onClick}
-        href={href}
-        passHref
-        className="px-6 py-3 text-2xl font-medium text-gray-900  hover:text-[#E43AA7] rounded-lg transition duration-300 ease-in-out"
+      <a
+        onClick={handleClick}
+        className="px-6 py-3 text-2xl font-medium text-gray-900 hover:text-[#E43AA7] rounded-lg transition duration-300 ease-in-out"
       >
-        {label}
-      </Link>
+        {title}
+      </a>
       <hr className="my-3 border-t border-gray-300" />
     </div>
   );
@@ -45,8 +70,6 @@ export default function MobileMenu({
             onClick={toggleMenu}
           />
         </Transition.Child>
-
-        {/* Menu Panel */}
         <div className="absolute inset-0 flex justify-end">
           <Transition.Child
             enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -59,15 +82,13 @@ export default function MobileMenu({
             <Dialog.Panel className="pointer-events-auto w-72 h-full bg-white shadow-xl rounded-r-xl">
               <div className="flex flex-col items-center py-10 space-y-6">
                 <h2 className="text-3xl font-bold text-[#E43AA7]">תפריט</h2>
-                {MENU_ITEMS.map(({ href, label, onClick }) => (
+                {menuItems.map(({ hash, link, title }) => (
                   <MenuItem
-                    key={href}
-                    href={href}
-                    label={label}
-                    onClick={(e) => {
-                      toggleMenu();
-                      onClick(e);
-                    }}
+                    key={hash}
+                    title={title}
+                    hash={hash}
+                    link={link}
+                    toggleMenu={toggleMenu}
                   />
                 ))}
               </div>
