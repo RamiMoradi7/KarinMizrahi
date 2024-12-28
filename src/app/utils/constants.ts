@@ -1,5 +1,3 @@
-import { MouseEventHandler } from "react";
-
 export type TCourse = {
   title: string;
   price: number;
@@ -33,19 +31,47 @@ export const COURSES: TCourse[] = [
   },
 ];
 
-
-export type TMenuItems = {
-  title: string;
-  link: string;
-  hash: string;
+export type TMenuItem = {
+  href: string;
+  label: string;
+  onClick: () => void;
 };
 
-export const menuItems: TMenuItems[] = [
-  { title: "דף הבית", link: "/", hash: "#hero" },
-  { title: "קצת עליי", link: "/", hash: "#about" },
-  { title: "קורסים", link: "/", hash: "#courses" },
-  { title: "עבודות", link: "/", hash: "#works" },
-  { title: "צרי קשר", link: "/", hash: "#contact" },
+export const scrollToSection = (section: string) => {
+  const sectionEl = document.getElementById(section);
+  if (!sectionEl) {
+    window.location.href = `/#${section}`;
+    return;
+  }
+  const navbarHeight = 100;
+
+  const sectionTop = sectionEl.getBoundingClientRect().top + window.pageYOffset;
+  const scrollToPosition = sectionTop - navbarHeight;
+
+  window.scrollTo({
+    top: scrollToPosition,
+    behavior: "smooth",
+  });
+};
+
+export const MENU_ITEMS: TMenuItem[] = [
+  { href: "/#hero", label: "דף הבית", onClick: () => scrollToSection("hero") },
+  {
+    href: "/#about",
+    label: "קצת עליי",
+    onClick: () => scrollToSection("about"),
+  },
+  {
+    href: "/#courses",
+    label: "קורסים",
+    onClick: () => scrollToSection("courses"),
+  },
+  { href: "/#works", label: "עבודות", onClick: () => scrollToSection("works") },
+  {
+    href: "/#contact",
+    label: "צרי קשר",
+    onClick: () => scrollToSection("contact"),
+  },
 ];
 
 type LEARNING = {
