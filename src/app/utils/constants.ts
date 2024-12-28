@@ -32,45 +32,20 @@ export const COURSES: TCourse[] = [
 ];
 
 export type TMenuItem = {
-  href: string;
+  link: string;
   label: string;
-  onClick: () => void;
-};
-
-export const scrollToSection = (section: string) => {
-  const sectionEl = document.getElementById(section);
-  if (!sectionEl) {
-    window.location.href = `/#${section}`;
-    return;
-  }
-  const navbarHeight = 100;
-
-  const sectionTop = sectionEl.getBoundingClientRect().top + window.pageYOffset;
-  const scrollToPosition = sectionTop - navbarHeight;
-
-  window.scrollTo({
-    top: scrollToPosition,
-    behavior: "smooth",
-  });
+  href: string;
 };
 
 export const MENU_ITEMS: TMenuItem[] = [
-  { href: "/#hero", label: "דף הבית", onClick: () => scrollToSection("hero") },
+  { link: "/", href: "hero", label: "דף הבית" },
+  { link: "/", href: "about", label: "קצת עליי" },
+  { link: "/", href: "courses", label: "קורסים" },
+  { link: "/", href: "works", label: "עבודות" },
   {
-    href: "/#about",
-    label: "קצת עליי",
-    onClick: () => scrollToSection("about"),
-  },
-  {
-    href: "/#courses",
-    label: "קורסים",
-    onClick: () => scrollToSection("courses"),
-  },
-  { href: "/#works", label: "עבודות", onClick: () => scrollToSection("works") },
-  {
-    href: "/#contact",
+    link: "/",
+    href: "contact",
     label: "צרי קשר",
-    onClick: () => scrollToSection("contact"),
   },
 ];
 

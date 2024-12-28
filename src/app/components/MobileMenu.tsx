@@ -2,17 +2,18 @@ import { Dialog, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { MENU_ITEMS, TMenuItem } from "../utils/constants";
 
-const MenuItem = ({ href, label, onClick }: TMenuItem) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    onClick();
-  };
-
+const MenuItem = ({
+  href,
+  label,
+  link,
+  toggleMenu,
+}: TMenuItem & { toggleMenu: () => void }) => {
   return (
     <div className="w-full">
       <Link
-        onClick={handleClick}
-        href={href}
+        href={`${link}#${href}`}
+        passHref
+        onClick={toggleMenu}
         className="px-6 py-3 text-2xl font-medium text-gray-900  hover:text-[#E43AA7] rounded-lg transition duration-300 ease-in-out"
       >
         {label}
@@ -63,15 +64,13 @@ export default function MobileMenu({
             <Dialog.Panel className="pointer-events-auto w-72 h-full bg-white shadow-xl rounded-r-xl">
               <div className="flex flex-col items-center py-10 space-y-6">
                 <h2 className="text-3xl font-bold text-[#E43AA7]">תפריט</h2>
-                {MENU_ITEMS.map(({ href, label, onClick }) => (
+                {MENU_ITEMS.map(({ href, label, link }) => (
                   <MenuItem
                     key={href}
+                    link={link}
                     href={href}
                     label={label}
-                    onClick={() => {
-                      toggleMenu();
-                      onClick();
-                    }}
+                    toggleMenu={toggleMenu}
                   />
                 ))}
               </div>

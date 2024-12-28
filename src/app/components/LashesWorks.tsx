@@ -26,7 +26,6 @@ export default function LashesWorks() {
             alt="Image 1"
             width={300}
             height={300}
-            objectFit="cover"
           />
         </div>
         <div>
@@ -36,7 +35,6 @@ export default function LashesWorks() {
             alt="Image 2"
             width={300}
             height={300}
-            objectFit="cover"
           />
         </div>
         <div>
@@ -46,7 +44,6 @@ export default function LashesWorks() {
             alt="Image 3"
             width={300}
             height={300}
-            objectFit="cover"
           />
         </div>
         <div>
@@ -56,7 +53,6 @@ export default function LashesWorks() {
             alt="Image 4"
             width={300}
             height={300}
-            objectFit="cover"
           />
         </div>
       </div>
