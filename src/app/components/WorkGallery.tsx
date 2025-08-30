@@ -67,18 +67,18 @@ const WorkGallery = () => {
   ];
 
   return (
-    <div className="relative mx-auto w-full max-w-5xl">
+    <div className="relative mx-auto w-full max-w-3xl mb-28">
       <div className="swiper">
         <div className="swiper-wrapper">
           {images.map((src, index) => (
             <div className="swiper-slide" key={index}>
-              <div className="relative w-full h-[400px] md:h-[600px] mx-auto overflow-hidden rounded-lg shadow-lg">
+              <div className="relative w-full h-[400px] md:h-[600px] mx-auto overflow-hidden rounded-lg shadow-xs">
                 <Image
                   src={src}
                   alt={`Gallery Image ${index + 1}`}
                   width={1000} 
                   height={500}
-                  className="object-cover w-full h-full transition-transform duration-500 ease-in-out" 
+                  className="object-contain w-full h-full transition-transform duration-500 ease-in-out" 
                 />
               </div>
             </div>

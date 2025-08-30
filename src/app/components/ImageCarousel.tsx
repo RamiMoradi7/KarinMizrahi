@@ -6,6 +6,7 @@ import Levelup2 from "/public/Levelup2.jpg";
 import Levelup3 from "/public/Levelup3.jpg";
 import Levelup4 from "/public/Levelup4.jpg";
 import Levelup5 from "/public/Levelup5.jpg";
+import Levelup6 from "/public/Levelup6.jpg";
 
 export default function ImageCarousel() {
   const innerRef = useRef<HTMLDivElement>(null);
@@ -16,7 +17,7 @@ export default function ImageCarousel() {
     { index: 2, color: "142, 252, 157", image: Levelup3 },
     { index: 3, color: "215, 252, 142", image: Levelup4 },
     { index: 4, color: "252, 252, 142", image: Levelup5 },
-    { index: 5, color: "252, 208, 142", image: Levelup5 },
+    { index: 5, color: "252, 208, 142", image: Levelup6 },
   ];
 
   useEffect(() => {

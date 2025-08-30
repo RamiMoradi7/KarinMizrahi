@@ -19,22 +19,24 @@ export default function NailsGallery() {
   return (
     <section
       id="works"
-      className="mt-[10vh] mb-[20vh]  p-8 rounded-lg shadow-lg"
+      className="mb-[20vh]  p-8 rounded-lg "
     >
-      <div className="text-center mb-12">
+      <div className="text-center mb-3">
         <Title
           title="גלריית עבודות"
-          className="text-zinc-600"
+          className="inline-block border-b border-black text-zinc-600 pb-1"
         />
       </div>
-      <div className="pt-6 lg:pb-6  rounded-3xl shadow-xl">
+      <div className="pt-6 lg:pb-6  rounded-xl">
         <WorkGallery />
       </div>
-      <div className=" mx-auto max-w-[1300px]">
+      <div className="mx-auto max-w-[1300px]">
+        <div className="text-center">
         <Title
-          title="ריסים ותחרויות"
-          className="text-zinc-600 m-10"
+          title="תחרות CWB"
+          className="text-zinc-600 inline-block border-b border-black pb-1 "
         />
+        </div>
         <LashesWorks />
       </div>
     </section>

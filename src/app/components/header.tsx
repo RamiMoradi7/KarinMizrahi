@@ -19,13 +19,13 @@ const Navbar: React.FC = () => {
           <div className="flex flex-row items-center justify-between p-2 lg:p-4">
             <Link href="/#hero" passHref>
               <Image
-                src={"/logo.png"}
+                src={"/logo.jpg"}
                 priority
                 alt="logo"
                 width={70}
                 height={70}
-                className="w-[70px] h-[70px] shadow-lg rounded-lg"
-              />
+                className="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] rounded-lg"
+                />
             </Link>
             <button
               className="rounded-lg md:hidden focus:outline-none focus:shadow-outline"

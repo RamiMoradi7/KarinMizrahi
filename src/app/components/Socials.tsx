@@ -18,7 +18,7 @@ export default function Socials() {
           </svg>
         </a>
         <a
-          href="https://instagram.com/karinmizrahi_beauty"
+          href="https://instagram.com/karinmizrahibeauty"
           target="_blank"
           rel="noopener noreferrer"
           className="border hover:bg-[#bc2a8d] w-12 h-12 fill-[#bc2a8d] hover:fill-white border-pink-200 rounded-full flex items-center justify-center shadow-xl hover:shadow-pink-500/50 cursor-pointer"

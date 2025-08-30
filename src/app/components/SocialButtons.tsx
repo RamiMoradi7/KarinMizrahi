@@ -54,7 +54,7 @@ export default function SocialButtons() {
         <a
           data-social="instagram"
           aria-label="אינסטגרם"
-          href="https://instagram.com/karinmizrahi_beauty"
+          href="https://instagram.com/karinmizrahibeauty"
           target="_blank"
           rel="noopener noreferrer"
         >

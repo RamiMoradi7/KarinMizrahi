@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Learnings() {
   return (
-    <div className="flex flex-wrap lg:w-3/5 sm:mx-auto sm:mb-2 -mx-2 p-4 border-2 border-[#E43AA7] rounded-lg">
+    <div className="flex flex-wrap lg:w-3/5 sm:mx-auto sm:mb-2 -mx-2 p-4 border-2 rounded-lg">
       {LEARNINGS.map(({ title }, index) => {
         const delayClass = `delay-${index * 100}`;
         return (

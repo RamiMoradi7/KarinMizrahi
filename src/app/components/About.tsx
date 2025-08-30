@@ -6,19 +6,19 @@ const About: React.FC = () => {
         className=" mt-[20vh] relative py-20 bg-pink-100 overflow-hidden shadow-2xl"
       >
         <div
-          className="absolute inset-0 bg-fixed bg-[center_3%] "
+          className="absolute inset-0 bg-fixed bg-[center_3%] back"
           style={{ backgroundImage: "url(/Karin3.jpg)" }}
         ></div>
 
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 md:px-8">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl lg:text-5xl text-white mb-6">
             קצת עליי
           </h2>
 
           <p className="text-lg lg:text-xl text-white mb-3">
-            ברוכה הבאה, אני קארין מזרחי עם 8 שנות ניסיון בתחום הציפורניים
+            ברוכה הבאה, אני קארין מזרחי עם 10 שנות ניסיון בתחום הציפורניים
           </p>
           <p className="text-lg lg:text-xl text-white mb-3">
             אצלי תוכלי לרכוש ליווי ומענה מיידי, הסברים ברורים וממוקדים
@@ -34,12 +34,7 @@ const About: React.FC = () => {
           </p>
         </div>
       </section>
-      <h2
-        className={`text-4xl lg:text-5xl font-extrabold text-center text-transparent bg-clip-text bg-zinc-800 tracking-wide uppercase 
-    transform transition-all duration-300  hover:shadow-lg`}
-      >
-        DO IT RIGHT
-      </h2>
+
     </>
   );
 };

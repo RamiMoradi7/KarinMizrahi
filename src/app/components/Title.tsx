@@ -7,7 +7,7 @@ export default function Title({
 }) {
   return (
     <h2
-      className={`${className} text-4xl lg:text-5xl font-bold text-center mb-8 lg:mb-12 text-[#E43AA7] tracking-wide uppercase shadow-md`}
+      className={`text-4xl lg:text-5xl text-center mb-8 lg:mb-12 text-[#E43AA7] tracking-wide uppercase ${className}`}
     >
       {title}
     </h2>

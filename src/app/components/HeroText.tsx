@@ -5,7 +5,7 @@ const HeroText: React.FC = () => {
   return (
     <div className="mt-6 md:mt-10 opacity-0 animate-fadeIn delay-600">
       <ul className="flex flex-col gap-4 justify-center items-start max-w-5xl mx-auto text-white">
-        <h2 className="text-4xl lg:text-5xl text-white font-bold opacity-0 animate-fadeIn delay-300 sm:text-center lg:text-left">
+        <h2 className="text-4xl lg:text-5xl text-white font-thin opacity-0 animate-fadeIn delay-300 sm:text-center lg:text-left">
           קארין מזרחי
         </h2>
         <li className="opacity-0 animate-fadeIn delay-700 flex items-center gap-4">
