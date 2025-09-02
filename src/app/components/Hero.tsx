@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
         </span>
         <Link
           href={"/#courses"}
-          className="w-40 px-6 py-3 rounded-lg font-semibold text-md bg-[#E43AA7] text-white border-2 border-pink-500 opacity-0 animate-fadeIn delay-1200 hover:bg-white hover:text-pink-500 transition-all transform hover:scale-105"
+          className="w-40 px-6 py-3 rounded-lg font-semibold text-md bg-[#000000] text-white border-2 border-white opacity-0 animate-fadeIn delay-1200 hover:bg-white hover:text-black transition-all transform hover:scale-105"
         >
           לחצי כאן !
         </Link>

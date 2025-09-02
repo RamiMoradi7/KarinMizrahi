@@ -32,6 +32,20 @@ export const COURSES: TCourse[] = [
     salePrice:1000,
     key: "level-up",
   },
+    {
+    title: "השתלמות פדיקור קוסמטי",
+    including: [
+     "מיועד לבנות ללא ניסיון קודם שרוצות להגדיל את מספר הטיפולים בעסק",
+      "מפגש 1:1 שאורך בין 6-7 שעות",
+      "נלמד פדיקור יבש (טיפוח כף הרגל) ומריחת לק ג'ל",
+      "עבודה מעשית ועיונית על החוברת המפורטת",
+      "בחוברת תקבלו מידע עבור כל הנושאים הקשורים לתחום הפדיקור",
+    ],
+    price: 2000,
+    salePrice:1000,
+    key: "cosmetic-pedicure",
+  },
+  
 ];
 
 export type TMenuItem = {
@@ -52,11 +66,11 @@ export const MENU_ITEMS: TMenuItem[] = [
   },
 ];
 
-type LEARNING = {
+export type LEARNING = {
   title: string;
 };
 
-export const LEARNINGS: LEARNING[] = [
+export const LEVELUP_LEARNINGS: LEARNING[] = [
   { title: "קיצור זמנים" },
   { title: "הסרה נכונה והכנת לוחית הציפורן" },
   { title: "שיוף צורה וסימטריה" },
@@ -70,6 +84,20 @@ export const LEARNINGS: LEARNING[] = [
   { title: "השלמת ציפורן בפוליג'ל" },
   { title: "צילום אינסטגרמי" },
 ];
+
+export const PEDICURE_LEARNINGS:LEARNING[] = [
+    {title:"הסרה נכונה של הג'ל הקודם"},
+    {title:"שיוף צורה למניעת ציפור חודרנית"},
+    {title:"מחלות בציפורניים"},
+    {title:"מתי לא נבצע טיפול ללקוחה"},
+    {title:"השפעתן של עונות השנה"},
+    {title:"מניקור בראש אחד וחיתוך במספריים"},
+    {title:"בחירת חומרים בהתאם ללקוחה"},
+    {title:"טיפוח כף הרגל - פדיקור יבש בפודודיסק"},
+    {title:"השלמת ציפורן בפוליג'ל ומריחה צמודה"},
+    {title:"צילום אינסטגרמי"},
+
+]
 
 export type StarterListItem = {
   text: string;
@@ -110,6 +138,20 @@ export const LEVELUP_LIST_BONUSES: StarterListItem[] = [
   { text: "המלצות לקניה חכמה" },
   { text: "תמחור עסקי נכון" },
 ];
+
+export const PEDICURE_LIST_ITEMS: StarterListItem[] = [
+  { text: "רשימת חומרים להמשך עבודה" },
+  { text: "תעודה מוסמכת" },
+  { text: "ליווי אישי לאורך כל הדרך" },
+];
+
+export const PEDICURE_LIST_BONUSES: StarterListItem[] = [
+  { text: "שיווק ברשתות חברתיות" },
+  { text: "אפליקציות לעריכה" },
+  { text: "המלצות לקניה חכמה" },
+  { text: "תמחור עסקי נכון" },
+];
+
 
 export type Lesson = {
   title: string;
@@ -171,5 +213,6 @@ export const LESSONS: Lesson[] = [
 export const FORM_SELECT_VALUES: string[] = [
   "קורס מתחילות לק ג'ל",
   "השתלמות מקצועיות",
+  "השתלמות פדיקור קוסמטי",
   "אחר",
 ];

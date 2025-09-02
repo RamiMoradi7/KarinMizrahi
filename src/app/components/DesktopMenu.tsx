@@ -6,7 +6,7 @@ const MenuItem = ({ href, label, link }: TMenuItem) => {
     <Link
       href={`${link}#${href}`}
       passHref
-      className="px-8 py-2 mt-2 text-lg font-semibold text-black bg-transparent rounded-lg hover:bg-[#E43AA7] hover:text-white focus:ring-offset-2 transition-all duration-300 ease-in-out transform hover:scale-105"
+      className="px-8 py-2 mt-2 text-lg font-semibold text-black bg-transparent rounded-lg hover:bg-[#000000] hover:text-white focus:ring-offset-2 transition-all duration-300 ease-in-out transform hover:scale-105"
     >
       <span
         className="text-shadow-md"

@@ -118,10 +118,10 @@ const ContactMeForm = () => {
         />
         <button
           type="submit"
-          className="bg-[#E43AA7] text-white px-6 py-3 rounded-full font-semibold w-full transition-all hover:bg-white hover:text-[#E43AA7]"
+          className="bg-red-500 text-white px-6 py-3 rounded-full font-semibold transition-all hover:bg-white hover:text-[#000000]"
           disabled={formState.isPending}
         >
-          {formState.isPending ? "טוען..." : "שלח"}
+          {formState.isPending ? "טוען..." : "שלחי"}
         </button>
         {formState.message && (
           <p

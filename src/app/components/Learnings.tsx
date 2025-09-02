@@ -1,7 +1,7 @@
-import { LEARNINGS } from "@/app/utils/constants";
+import { LEARNING } from "@/app/utils/constants";
 import React from "react";
 
-export default function Learnings() {
+export default function Learnings({ LEARNINGS }: { LEARNINGS: LEARNING[] }) {
   return (
     <div className="flex flex-wrap lg:w-3/5 sm:mx-auto sm:mb-2 -mx-2 p-4 border-2 rounded-lg">
       {LEARNINGS.map(({ title }, index) => {

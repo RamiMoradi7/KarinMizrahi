@@ -1,13 +1,14 @@
 import ImageCarousel from "@/app/components/ImageCarousel";
+import List from "@/app/components/List";
 import Title from "@/app/components/Title";
+import {
+    LEVELUP_LEARNINGS,
+    LEVELUP_LIST_BONUSES,
+    LEVELUP_LIST_ITEMS
+} from "@/app/utils/constants";
 import { Metadata } from "next";
 import React from "react";
-import Learnings from "./Learnings";
-import List from "@/app/components/List";
-import {
-  LEVELUP_LIST_BONUSES,
-  LEVELUP_LIST_ITEMS,
-} from "@/app/utils/constants";
+import Learnings from "../../components/Learnings";
 
 export const metadata: Metadata = {
   title: "השתלמות Level Up",
@@ -22,7 +23,7 @@ const LevelUpPage: React.FC = () => {
         className="animate-slide-fade text-center text-4xl md:text-5xl mb-6 text-black"
       />
       <div className="flex flex-col items-center gap-8">
-        <Learnings />
+        <Learnings LEARNINGS={LEVELUP_LEARNINGS} />
       </div>
       <div className="bg-white text-black p-10 rounded-3xl mb-10 shadow-2xl mt-12 mx-auto w-full max-w-5xl">
         <h2 className="text-3xl font-thin text-center text-[#EF4444] mb-6">

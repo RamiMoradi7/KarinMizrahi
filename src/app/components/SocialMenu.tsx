@@ -27,7 +27,7 @@ export default function SocialMenu() {
     >
       <button
         onClick={toggleMenu}
-        className={`fixed bottom-5 right-6 p-4 bg-[#E43AA7] text-white rounded-full shadow-lg transition-transform duration-300 ease-in-out ${
+        className={`fixed bottom-5 right-6 p-4 bg-[#25D366] border-2 border-white text-white rounded-full shadow-lg transition-transform duration-300 ease-in-out ${
           isOpen ? "rotate-180" : ""
         }`}
       >

@@ -9,7 +9,7 @@ const HeroText: React.FC = () => {
           קארין מזרחי
         </h2>
         <li className="opacity-0 animate-fadeIn delay-700 flex items-center gap-4">
-          <div className="relative w-10 h-10 rounded-full overflow-hidden bg-gradient-to-r from-pink-500 to-purple-600">
+          <div className="relative w-7 h-7 rounded-full overflow-hidden bg-gradient-to-r from-black to-white">
             <Image
               src={NailsSvg}
               alt="Nails icon"
@@ -23,7 +23,7 @@ const HeroText: React.FC = () => {
           </span>
         </li>
         <li className="opacity-0 animate-fadeIn delay-800 flex items-center gap-4">
-          <div className="relative w-10 h-10 rounded-full overflow-hidden bg-gradient-to-r from-pink-500 to-purple-600">
+          <div className="relative w-7 h-7 rounded-full overflow-hidden bg-gradient-to-r from-black to-white">
             <Image
               src={NailsSvg}
               alt="Nails icon"
@@ -37,7 +37,7 @@ const HeroText: React.FC = () => {
           </span>
         </li>
         <li className="opacity-0 animate-fadeIn delay-900 flex items-center gap-4">
-          <div className="relative w-10 h-10 rounded-full overflow-hidden bg-gradient-to-r from-pink-500 to-purple-600">
+          <div className="relative w-7 h-7 rounded-full overflow-hidden bg-gradient-to-r from-black to-white">
             <Image
               src={NailsSvg}
               alt="Nails icon"

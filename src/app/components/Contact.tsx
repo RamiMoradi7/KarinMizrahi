@@ -21,7 +21,7 @@ const ContactMe: React.FC = () => {
         <Title title="לפרטים נוספים"  className="text-zinc-600" />
         <button
           onClick={toggleForm}
-          className="bg-[#E43AA7] text-white px-6 py-3 rounded-full font-semibold text-lg transition-all transform hover:bg-white hover:text-[#E43AA7] hover:scale-105"
+          className="bg-[#000000] text-white px-6 py-3 rounded-full font-semibold text-lg transition-all transform hover:bg-white hover:text-[#000000] hover:scale-105"
         >
           צרי קשר
         </button>
