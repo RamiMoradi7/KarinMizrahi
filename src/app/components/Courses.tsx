@@ -9,7 +9,7 @@ export default function Courses() {
       className="mt-[10vh] min-h-screen bg-zinc-100 py-16 px-6 lg:px-20 animate-fadeIn"
     >
       <Title title="קורסים" className="text-black" />
-      <div className="flex flex-wrap justify-center gap-8 lg:gap-16 w-full">
+      <div className="flex flex-wrap lg:flex-nowrap justify-center gap-8 lg:gap-16 w-full">
         {COURSES.map((course) => (
           <Course
             key={course.title}
